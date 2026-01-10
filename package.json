@@ -1,4 +1,4 @@
-cat > package.json <<'JSON'
+
 {
   "name": "week-2-mindset-gpt-coach",
   "private": true,
@@ -21,5 +21,5 @@ cat > package.json <<'JSON'
     "@types/react-dom": "19.0.3"
   }
 }
-JSON
+
 
