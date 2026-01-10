@@ -1,18 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import { reframeThought } from "../../agents/reframeAgent";
+
+type Msg = { role: "user" | "coach"; text: string };
 
 export default function Chat() {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<string[]>([]);
+  const [messages, setMessages] = useState<Msg[]>([]);
 
   function handleSend() {
-    if (!input.trim()) return;
+    const thought = input.trim();
+    if (!thought) return;
 
-    const userMessage = `You: ${input}`;
-    const coachReply = `MindsetGPT: Let’s reframe this. What if this situation is not blocking you, but pointing you toward a skill or boundary you need to strengthen?`;
+    const userMsg: Msg = { role: "user", text: thought };
 
-    setMessages((prev) => [...prev, userMessage, coachReply]);
+    const result = reframeThought(thought);
+
+    const coachMsg: Msg = {
+      role: "coach",
+      text: [
+        result.reframe,
+        "",
+        `Why this helps: ${result.explanation}`,
+        "",
+        `Next action: ${result.action}`,
+      ].join("\n"),
+    };
+
+    setMessages((prev) => [...prev, userMsg, coachMsg]);
     setInput("");
   }
 
@@ -23,9 +39,10 @@ export default function Chat() {
           border: "1px solid #ddd",
           borderRadius: 8,
           padding: 16,
-          minHeight: 200,
+          minHeight: 220,
           marginBottom: 12,
           background: "#fafafa",
+          whiteSpace: "pre-wrap",
         }}
       >
         {messages.length === 0 && (
@@ -34,10 +51,13 @@ export default function Chat() {
           </p>
         )}
 
-        {messages.map((msg, i) => (
-          <p key={i} style={{ marginBottom: 8 }}>
-            {msg}
-          </p>
+        {messages.map((m, i) => (
+          <div key={i} style={{ marginBottom: 12 }}>
+            <div style={{ fontWeight: 700, marginBottom: 4 }}>
+              {m.role === "user" ? "You" : "MindsetGPT"}
+            </div>
+            <div>{m.text}</div>
+          </div>
         ))}
       </div>
 
@@ -45,6 +65,9 @@ export default function Chat() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSend();
+          }}
           placeholder="What’s on your mind?"
           style={{
             flex: 1,
@@ -70,4 +93,5 @@ export default function Chat() {
     </div>
   );
 }
+
 
