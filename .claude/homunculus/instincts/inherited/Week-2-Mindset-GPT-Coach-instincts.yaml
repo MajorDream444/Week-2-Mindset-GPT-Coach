@@ -1,0 +1,323 @@
+# Instincts generated from https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+# Generated: 2026-07-19T11:38:07.170Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Week-2-Mindset-GPT-Coach-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore
+
+## Evidence
+
+- 4 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore: add production readiness control (AGENTS.md), chore: add production readiness control (CLAUDE.md)
+
+---
+id: Week-2-Mindset-GPT-Coach-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Commit Length
+
+## Action
+
+Write moderate-length commit messages (~62 characters)
+
+## Evidence
+
+- Average commit message length: 62 chars
+- Based on 4 commits
+
+---
+id: Week-2-Mindset-GPT-Coach-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: Week-2-Mindset-GPT-Coach-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Week-2-Mindset-GPT-Coach-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: Week-2-Mindset-GPT-Coach-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Week-2-Mindset-GPT-Coach-workflow-add-production-readiness-control-doc
+trigger: "when doing add production readiness control doc"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset GPT Coach Workflow Add Production Readiness Control Doc
+
+## Action
+
+Follow the add-production-readiness-control-doc workflow:
+1. Identify the agent or component requiring production readiness documentation.
+2. Create or update a corresponding markdown file (e.g., AGENTS.md, CLAUDE.md, .github/PRODUCTION_READINESS.md, .github/pull_request_template.md) with the relevant controls or checklists.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: AGENTS.md, CLAUDE.md, .github/PRODUCTION_READINESS.md
+
+---
+id: week-2-mindset-gpt-coach-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct File Naming
+
+## Action
+
+Name the file using snake_case format
+
+## Evidence
+
+- Pattern in namingConventions.files: snake_case
+
+---
+id: week-2-mindset-gpt-coach-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Function Naming
+
+## Action
+
+Name the function using camelCase format
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: week-2-mindset-gpt-coach-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase format
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: week-2-mindset-gpt-coach-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE format
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: week-2-mindset-gpt-coach-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: week-2-mindset-gpt-coach-instinct-export-style
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: week-2-mindset-gpt-coach-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: week-2-mindset-gpt-coach-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Git Commit Format
+
+## Action
+
+Use the conventional commit format with a 'chore' prefix for maintenance/documentation tasks
+
+## Evidence
+
+- Seen in commit: 'chore: add production readiness control (AGENTS.md)'
+- Pattern in commits.prefixes: chore
+
+---
+id: week-2-mindset-gpt-coach-instinct-production-readiness-doc
+trigger: "When someone wants to document or enforce production readiness requirements for a new agent, component, or the repository as a whole"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: MajorDream444/Week-2-Mindset-GPT-Coach
+---
+
+# Week 2 Mindset Gpt Coach Instinct Production Readiness Doc
+
+## Action
+
+Create or update a markdown file (e.g., AGENTS.md, CLAUDE.md, .github/PRODUCTION_READINESS.md, .github/pull_request_template.md) with the relevant controls or checklists
+
+## Evidence
+
+- Workflow: add-production-readiness-control-doc
+- Seen in commits: 'chore: add production readiness control (AGENTS.md)', etc.
+
